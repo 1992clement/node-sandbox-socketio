@@ -1,0 +1,9 @@
+{
+  "name": "socket.io-sandbox",
+  "description" : "little sandbox to fiddle with socket.io",
+  "version": "0.0.1",
+  "main": "./public/main.js",
+  "dependencies": {
+    
+  }
+}

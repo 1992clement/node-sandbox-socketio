@@ -1,0 +1,11 @@
+version: "2.0"
+services:
+  app:
+    container_name: nodejs
+    image: node:12.1.0-alpine
+    working_dir: "/home/node/app"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/home/node/app
+    command: "npx pm2 start ecosystem.config.js --no-daemon"

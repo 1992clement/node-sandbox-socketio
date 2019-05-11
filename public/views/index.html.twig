@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>
+      Chat Sandbox - Accueil
+    </title>
+  </head>
+  <body>
+
+    <h2>Chat</h2>
+    <input type="text" id="message"/>
+    <button onclick="sendMsg()">Send message</button>
+    <div id="chat"></div>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect("localhost:8080");
+
+      var pseudo = prompt('Votre pseudo :');
+      socket.emit('pseudo', pseudo);
+
+      socket.on('msg', function(msg){
+        document.getElementById('chat').innerHTML += '<br>' + msg;
+      });
+
+      var sendMsg = function(){
+        socket.emit('msg', document.getElementById('message').value);
+        document.getElementById('chat').innerHTML += '<br>' + pseudo + ' : ' + document.getElementById('message').value;
+      }
+
+    </script>
+  </body>
+</html>
