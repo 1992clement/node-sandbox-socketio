@@ -1,6 +1,9 @@
-# Fiddling around with nodeJS
+# Basic chat with socket.io
 
-Lancement du container :
-```docker run -ti -p 8080:8080 -v $(pwd):/home/node/app --rm node:12.1.0-alpine sh```
-
-Todolist pour tester les fonctionnalités de base d'express.
+Setup :
+```
+  git clone https://github.com/1992clement/node-sandbox1.git
+  cd node-sandbox1
+  npm install
+  docker-compose up -d
+```
