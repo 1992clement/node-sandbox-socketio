@@ -2,8 +2,8 @@
 
 Setup :
 ```
-  git clone https://github.com/1992clement/node-sandbox1.git
-  cd node-sandbox1
+  git clone https://github.com/1992clement/node-sandbox-socketio.git
+  cd node-sandbox-socketio
   npm install
   docker-compose up -d
 ```
